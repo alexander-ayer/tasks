@@ -1,6 +1,9 @@
 import React from "react";
 import "./App.css";
-import { Button } from "react-bootstrap";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { TwoDice } from "./components/TwoDice";
+import { Counter } from "./components/Counter";
 
 function App(): React.JSX.Element {
     return (
@@ -8,17 +11,14 @@ function App(): React.JSX.Element {
             <header className="App-header">
                 UM COS420 with React Hooks and TypeScript
             </header>
-            <h1>Why LeBron is the G.O.A.T.</h1>
-            <ul>
-                <li>He scoreas alot of points</li>
-                <li>He gets a lot of assists</li>
-                <li>He gets a lot of ebounds</li>
-            </ul>
-            <img src="../images/LeBron.png" alt="A picture of the King" />
-            <Button onClick={ () => { console.log("Hello World!") } }>Log Hello World</Button>
-            <div>
-                This is <span style={ {backgroundColor: 'red'} }>colored text</span>.
-            </div>
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
         </div>
     );
 }
